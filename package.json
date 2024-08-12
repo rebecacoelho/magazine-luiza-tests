@@ -1,0 +1,11 @@
+{
+  "name": "magalu_tests",
+  "version": "1.0.0",
+  "description": "Website magalu tests using cypress",
+  "main": "index.js",
+  "author": "Rebeca Coelho",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.13.2"
+  }
+}
