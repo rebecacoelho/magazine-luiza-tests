@@ -102,7 +102,7 @@ describe('Website Magazine Luiza Tests', () => {
   });
 
 
-  it('Deve adicionar 2 unidades do produto ao carrinho e validar a quantidade no carrinho', () => {
+  it('Deve adicionar 2 unidades do produto ao carrinho com um produto que exige compra de 2 unidades no minímo', () => {
     cy.visit('https://www.magazineluiza.com.br/desodorante-antitranspirante-aerossol-dove-sensitive-48-horas-sem-perfume-150ml/p/221371500/me/mddt/');
 
     cy.get('[data-testid="bagButton"]').first().click();
