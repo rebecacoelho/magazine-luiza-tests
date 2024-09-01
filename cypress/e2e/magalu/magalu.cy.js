@@ -16,7 +16,6 @@ describe('Website Magazine Luiza Tests', () => {
     cy.get('[data-testid="product-card-container"]').should('exist');
   });
 
-
   it('Deve carregar a página de detalhes do produto ao clicar wm produto', () => {
     cy.visit('https://www.magazineluiza.com.br');
 
@@ -79,8 +78,8 @@ describe('Website Magazine Luiza Tests', () => {
   it('Deve cadastrar o e-mail para receber avisos de promoções', () => {
     cy.visit('https://www.magazineluiza.com.br');
    
-    cy.get('[data-testid="newsletter-input-name"]').type('Meu Nome');
-    cy.get('[data-testid="newsletter-input-email"]').type('meuemail@exemplo.com');
+    cy.get('[data-testid="newsletter-input-name"]').type('Rebeca Coelho');
+    cy.get('[data-testid="newsletter-input-email"]').type('meuemail@gmail.com');
     cy.get('[data-testid="newsletter-submit"]').click();
 
     cy.get('[data-testid="newsletter-title"]').should(($el) => {
@@ -119,6 +118,6 @@ describe('Website Magazine Luiza Tests', () => {
    
     cy.get('.css-1d2yaw8').first().click();
     cy.get('[aria-label="Ativar Hand Talk Plugin"]').click();
-    cy.get('.sc-gHjVMF.jnTsIG').should('be.visible');
+    cy.get('.sc-gHjVMF').should('be.visible');
   });
 });
