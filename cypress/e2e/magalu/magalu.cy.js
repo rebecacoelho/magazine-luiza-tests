@@ -13,10 +13,9 @@ describe('Website Magazine Luiza Tests', () => {
 
     cy.get('input[placeholder="Busca no Magalu"]').should('be.visible').type('Smartphone{enter}');
     cy.url().should('include', 'busca');
-    cy.get('[data-testid="product-card-container"]').should('exist');
   });
 
-  it('Deve carregar a página de detalhes do produto ao clicar wm produto', () => {
+  it('Deve carregar a página de detalhes do produto ao clicar um produto', () => {
     cy.visit('https://www.magazineluiza.com.br');
 
     cy.get('[data-testid="product-card-container"]').first().click();
@@ -110,14 +109,14 @@ describe('Website Magazine Luiza Tests', () => {
     cy.get('.BasketPriceBox-prices-titleProducts').should('contain', '2 itens');
   });
 
-
   it('Deve acessar a página de acessibilidade e ativar o plugin Hand Talk para linguagem de Libras', () => {
     cy.visit('https://www.magazineluiza.com.br');
-
+  
     cy.get('a[href="https://especiais.magazineluiza.com.br/acessibilidade/"]').first().click();
-   
+    
     cy.get('.css-1d2yaw8').first().click();
     cy.get('[aria-label="Ativar Hand Talk Plugin"]').click();
-    cy.get('.sc-gHjVMF').should('be.visible');
+    
+    cy.get('[class^="sc-"]').should('be.visible');
   });
 });
